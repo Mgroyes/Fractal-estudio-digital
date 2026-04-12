@@ -1,18 +1,45 @@
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-    isOpen = false;
 
-  toggleMenu() {
-    this.isOpen = !this.isOpen;
+  isServicesOpen = false;
+  isMobileOpen = false;
+  isMobileServicesOpen = false;
+
+  isScrolled = false; // 🔥 NUEVO
+
+  toggleServices() {
+    this.isServicesOpen = !this.isServicesOpen;
+  }
+
+  toggleMobile() {
+    this.isMobileOpen = !this.isMobileOpen;
+  }
+
+  toggleMobileServices() {
+    this.isMobileServicesOpen = !this.isMobileServicesOpen;
+  }
+
+  // 🔥 DETECTAR SCROLL
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
+
+  // 🔥 CERRAR MENÚ AL HACER CLICK AFUERA
+  @HostListener('document:click', ['$event'])
+  closeOutside(event: Event) {
+    const target = event.target as HTMLElement;
+
+    if (!target.closest('header')) {
+      this.isServicesOpen = false;
+    }
   }
 }
-
