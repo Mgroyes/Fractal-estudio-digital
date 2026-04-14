@@ -1,0 +1,257 @@
+<section class="relative pt-24 pb-20 text-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="flex items-center gap-4 mb-6">
+      <div class="w-5 h-5 rounded-full bg-gray-300"></div>
+
+      <h2 class="tracking-[0.4em] text-sm text-gray-300">
+        SERVICIOS
+      </h2>
+
+      <div class="flex-1 h-[1px] bg-gray-500"></div>
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+    <p class="text-lg lg:text-xl text-gray-300 max-w-3xl mb-16 leading-relaxed">
+      Como diseñadores y desarrolladores, lideramos procesos integrales 
+      que combinan creatividad, estrategia y tecnología.
+    </p>
+
+    <!-- CONTENEDOR -->
+    <div class="flex flex-col gap-6">
+
+      <!-- ITEM 1 -->
+      <div class="border border-white/20 rounded-3xl bg-white/5 backdrop-blur-xl overflow-hidden">
+
+        <!-- HEADER -->
+        <div 
+          class="flex items-center justify-between p-6 cursor-pointer">
+
+          <div class="flex items-center gap-4">
+            <div class="w-5 h-5 rounded-full bg-gray-300"></div>
+
+            <div>
+              <h3 class="font-semibold">Diseño web y software</h3>
+              <p class="text-sm text-gray-300">
+                Diseñamos y desarrollamos sitios web personalizados, funcionales y adaptables.
+              </p>
+            </div>
+          </div>
+
+          <i class="bi bi-chevron-down transition"
+             (click)="toggle(0)"
+             [class.rotate-180]="activeIndex === 0"></i>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div *ngIf="activeIndex === 0" class="px-6 pb-6">
+          
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+
+            <!-- IMAGEN -->
+            <img 
+              src="assets/imgs/imgServicios1.png"
+              class="rounded-2xl w-full object-cover">
+
+            <!-- TEXTO -->
+            <div class="text-gray-300 space-y-3">
+              <p>
+                Con nuestro servicio no solo obtendrás productos lindos,
+                lo más importante funcionales
+              </p>
+
+              <ul class="space-y-2">
+                <li>- Más clientes, no solo visitas</li>
+                <li>- Experiencia que genera confianza</li>
+                <li>- Soluciones a la medida de tu negocio</li>
+                <li>- Escalabilidad y rendimiento</li>
+              </ul>
+
+              <button class="mt-4 px-6 py-3 border border-white/30 rounded-xl hover:bg-white/20 transition">
+                Ver más
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="border border-white/20 rounded-3xl bg-white/5 backdrop-blur-xl overflow-hidden">
+
+        <!-- HEADER -->
+        <div 
+          (click)="toggle(1)"
+          class="flex items-center justify-between p-6 cursor-pointer">
+
+          <div class="flex items-center gap-4">
+            <div class="w-5 h-5 rounded-full bg-gray-300"></div>
+
+            <div>
+              <h3 class="font-semibold">Diseño web y software</h3>
+              <p class="text-sm text-gray-300">
+                Diseñamos y desarrollamos sitios web personalizados, funcionales y adaptables.
+              </p>
+            </div>
+          </div>
+
+          <i class="bi bi-chevron-down transition"
+             [class.rotate-180]="activeIndex === 1"></i>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div *ngIf="activeIndex === 1" class="px-6 pb-6">
+          
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+
+            <!-- IMAGEN -->
+            <img 
+              src="assets/imgs/imgServicios1.png"
+              class="rounded-2xl w-full object-cover">
+
+            <!-- TEXTO -->
+            <div class="text-gray-300 space-y-3">
+              <p>
+                Con nuestro servicio no solo obtendrás productos lindos,
+                lo más importante funcionales
+              </p>
+
+              <ul class="space-y-2">
+                <li>- Más clientes, no solo visitas</li>
+                <li>- Experiencia que genera confianza</li>
+                <li>- Soluciones a la medida de tu negocio</li>
+                <li>- Escalabilidad y rendimiento</li>
+              </ul>
+
+              <button class="mt-4 px-6 py-3 border border-white/30 rounded-xl hover:bg-white/20 transition">
+                Ver más
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="border border-white/20 rounded-3xl bg-white/5 backdrop-blur-xl overflow-hidden">
+
+        <!-- HEADER -->
+        <div 
+          (click)="toggle(2)"
+          class="flex items-center justify-between p-6 cursor-pointer">
+
+          <div class="flex items-center gap-4">
+            <div class="w-5 h-5 rounded-full bg-gray-300"></div>
+
+            <div>
+              <h3 class="font-semibold">Diseño web y software</h3>
+              <p class="text-sm text-gray-300">
+                Diseñamos y desarrollamos sitios web personalizados, funcionales y adaptables.
+              </p>
+            </div>
+          </div>
+
+          <i class="bi bi-chevron-down transition"
+             [class.rotate-180]="activeIndex === 2"></i>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div *ngIf="activeIndex === 2" class="px-6 pb-6">
+          
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+
+            <!-- IMAGEN -->
+            <img 
+              src="assets/imgs/imgServicios1.png"
+              class="rounded-2xl w-full object-cover">
+
+            <!-- TEXTO -->
+            <div class="text-gray-300 space-y-3">
+              <p>
+                Con nuestro servicio no solo obtendrás productos lindos,
+                lo más importante funcionales
+              </p>
+
+              <ul class="space-y-2">
+                <li>- Más clientes, no solo visitas</li>
+                <li>- Experiencia que genera confianza</li>
+                <li>- Soluciones a la medida de tu negocio</li>
+                <li>- Escalabilidad y rendimiento</li>
+              </ul>
+
+              <button class="mt-4 px-6 py-3 border border-white/30 rounded-xl hover:bg-white/20 transition">
+                Ver más
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="border border-white/20 rounded-3xl bg-white/5 backdrop-blur-xl overflow-hidden">
+
+        <!-- HEADER -->
+        <div 
+          (click)="toggle(3)"
+          class="flex items-center justify-between p-6 cursor-pointer">
+
+          <div class="flex items-center gap-4">
+            <div class="w-5 h-5 rounded-full bg-gray-300"></div>
+
+            <div>
+              <h3 class="font-semibold">Diseño web y software</h3>
+              <p class="text-sm text-gray-300">
+                Diseñamos y desarrollamos sitios web personalizados, funcionales y adaptables.
+              </p>
+            </div>
+          </div>
+
+          <i class="bi bi-chevron-down transition"
+             [class.rotate-180]="activeIndex === 3"></i>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div *ngIf="activeIndex === 3" class="px-6 pb-6">
+          
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+
+            <!-- IMAGEN -->
+            <img 
+              src="assets/imgs/imgServicios1.png"
+              class="rounded-2xl w-full object-cover">
+
+            <!-- TEXTO -->
+            <div class="text-gray-300 space-y-3">
+              <p>
+                Con nuestro servicio no solo obtendrás productos lindos,
+                lo más importante funcionales
+              </p>
+
+              <ul class="space-y-2">
+                <li>- Más clientes, no solo visitas</li>
+                <li>- Experiencia que genera confianza</li>
+                <li>- Soluciones a la medida de tu negocio</li>
+                <li>- Escalabilidad y rendimiento</li>
+              </ul>
+
+              <button class="mt-4 px-6 py-3 border border-white/30 rounded-xl hover:bg-white/20 transition">
+                Ver más
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
