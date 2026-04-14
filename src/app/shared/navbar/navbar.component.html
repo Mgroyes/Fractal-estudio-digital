@@ -136,22 +136,36 @@
   </div>
 
   <!-- 📱 MOBILE MENU -->
+  <!-- 📱 MOBILE MENU -->
+<div
+  *ngIf="isMobileOpen"
+  class="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4"
+>
+
+  <!-- CONTENEDOR GLASS -->
   <div
-    *ngIf="isMobileOpen"
-    class="fixed inset-0 bg-black/95 backdrop-blur-xl text-white z-50 flex flex-col p-6"
+    class="w-full max-w-md 
+    text-white 
+    rounded-3xl 
+    p-6 
+    border border-white/10 
+    shadow-2xl 
+    backdrop-blur-xl 
+    bg-[#0b0f2a]/40
+    transition-all duration-300"
   >
 
     <!-- TOP -->
-    <div class="flex justify-between items-center mb-10">
-      <img src="assets/imgs/logoFractal.png" class="w-28" />
+    <div class="flex justify-between items-center mb-8">
+      <img src="assets/imgs/logoFractal.png" class="w-24" />
 
       <button (click)="toggleMobile()">
-        <i class="bi bi-x-lg text-2xl"></i>
+        <i class="bi bi-x-lg text-xl"></i>
       </button>
     </div>
 
     <!-- LINKS -->
-    <div class="flex flex-col gap-6 text-lg">
+    <div class="flex flex-col gap-6 text-base">
 
       <!-- SERVICIOS -->
       <div>
@@ -160,7 +174,7 @@
           (click)="toggleMobileServices()"
           class="flex justify-between items-center w-full py-2"
         >
-          Servicios
+          <span class="font-medium">Servicios</span>
 
           <i
             class="bi transition"
@@ -193,15 +207,16 @@
 
       </div>
 
-      <a class="hover:text-white/70">Nosotros</a>
-      <a class="hover:text-white/70">Proceso</a>
-      <a class="hover:text-white/70">Portafolio</a>
-      <a class="hover:text-white/70">Testimonios</a>
+      <!-- LINKS PRINCIPALES -->
+      <a class="hover:text-white/70 transition">Nosotros</a>
+      <a class="hover:text-white/70 transition">Proceso</a>
+      <a class="hover:text-white/70 transition">Portafolio</a>
+      <a class="hover:text-white/70 transition">Testimonios</a>
 
     </div>
 
     <!-- CTA -->
-    <div class="mt-auto pt-10 flex flex-col gap-4">
+    <div class="mt-10 flex flex-col gap-4">
 
       <button class="bg-white/10 py-3 rounded-xl flex justify-center gap-2">
         <i class="bi bi-whatsapp"></i> WhatsApp
@@ -214,5 +229,7 @@
     </div>
 
   </div>
+
+</div>
 
 </header>
