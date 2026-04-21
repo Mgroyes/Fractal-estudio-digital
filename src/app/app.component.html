@@ -1,33 +1,60 @@
 <!-- 🌌 FONDO GLOBAL -->
-<!-- 🌌 FONDO GLOBAL -->
 <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
 
   <!-- 🎨 GRADIENTE BASE -->
   <div class="absolute inset-0 bg-gradient-to-br from-[#0b0f2a] via-[#1b1f5c] to-[#671AAB]"></div>
 
-  <div class="absolute top-[10%] left-[30%] translate-x-[40%] 
-            w-[600px] h-[600px] 
-            bg-cyan-400/20 blur-[120px] rounded-full">
+  <!-- ✨ LUZ 1 -->
+  <div class="
+    absolute 
+    top-[10%] left-1/2 -translate-x-1/2
+    w-[250px] h-[250px] 
+    md:w-[400px] md:h-[400px] 
+    xl:w-[600px] xl:h-[600px]
+    bg-cyan-400/20 
+    blur-[80px] md:blur-[100px] xl:blur-[120px] 
+    rounded-full
+  ">
+  </div>
+
+  <!-- ✨ LUZ 2 -->
+  <div class="
+    absolute 
+    top-[50%] left-1/2 -translate-x-1/2
+    w-[220px] h-[220px] 
+    md:w-[350px] md:h-[350px] 
+    xl:w-[500px] xl:h-[500px]
+    bg-purple-500/20 
+    blur-[80px] md:blur-[100px] xl:blur-[120px] 
+    rounded-full
+  ">
+  </div>
+
+  <!-- ✨ LUZ 3 -->
+  <div class="
+    absolute 
+    bottom-[10%] left-1/2 -translate-x-1/2
+    w-[200px] h-[200px] 
+    md:w-[300px] md:h-[300px] 
+    xl:w-[400px] xl:h-[400px]
+    bg-blue-500/20 
+    blur-[80px] md:blur-[100px] xl:blur-[120px] 
+    rounded-full
+  ">
+  </div>
+
 </div>
 
-<!-- ✨ LUZ 2 -->
-<div class="absolute top-[50%] left-[30%] -translate-x-[60%] 
-            w-[500px] h-[500px] 
-            bg-purple-500/20 blur-[120px] rounded-full">
-</div>
+<!-- CONTENIDO -->
+<div class="relative overflow-x-hidden">
 
-<!-- ✨ LUZ 3 -->
-<div class="absolute bottom-[10%] left-[30%] translate-x-[60%] 
-            w-[400px] h-[400px] 
-            bg-blue-500/20 blur-[120px] rounded-full">
-</div>
+  <app-navbar></app-navbar>
+  <app-hero></app-hero>
+  <app-nosotros></app-nosotros>
+  <app-servicios></app-servicios>
+  <app-proceso></app-proceso>
+  <app-contact></app-contact>
+  <app-portafolio></app-portafolio>
+  <app-footer></app-footer>
 
 </div>
-<app-navbar></app-navbar>
-<app-hero></app-hero>
-<app-nosotros></app-nosotros>
-<app-servicios></app-servicios>
-<app-proceso></app-proceso>
-<app-contact></app-contact>
-<app-portafolio></app-portafolio>
-<app-footer></app-footer>

@@ -1,20 +1,35 @@
 <header
- class="fixed top-0 left-0 w-full z-50 transition-all duration-50"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
   [ngClass]="{
 
-    'bg-[#0b0f2a]/90 border-b border-white/10 shadow-lg':
-      isServicesOpen,
-
-    'bg-[#0b0f2a]/80 border-b border-white/10 shadow-lg':
-      isScrolled || isMobileOpen,
+    'border-b border-white/10 shadow-lg':
+      isServicesOpen || isScrolled || isMobileOpen,
 
     'bg-transparent':
       !isScrolled && !isServicesOpen && !isMobileOpen
   }"
 >
 
-  <!-- NAV -->
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center text-white">
+  <!-- 🔥 CAPA BASE (BLUR SIEMPRE ACTIVO) -->
+  <div class="absolute inset-0 backdrop-blur-sm bg-[#0b0f2a]/30"></div>
+
+  <!-- 🔥 CAPA DINÁMICA (SE SUMA, NO REEMPLAZA) -->
+  <div
+    class="absolute inset-0 transition-all duration-300"
+    [ngClass]="{
+      'bg-[#0b0f2a]/70 backdrop-blur-md':
+        isServicesOpen,
+
+      'bg-[#0b0f2a]/60 backdrop-blur-sm':
+        isScrolled || isMobileOpen,
+
+      'bg-transparent backdrop-blur-0':
+        !isScrolled && !isServicesOpen && !isMobileOpen
+    }"
+  ></div>
+
+  <!-- 🧱 NAV -->
+  <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center text-white">
 
     <!-- LOGO -->
     <div class="flex items-center">
@@ -58,17 +73,17 @@
       : 'opacity-0 scale-95 pointer-events-none'"
   >
 
-<div
-  class="max-w-7xl mx-auto 
-  text-white 
-  rounded-3xl 
-  p-6 lg:p-10 
-  border border-white/10 
-  shadow-2xl 
-  relative
-  transition-all duration-50 
-  backdrop-blur-xl bg-[#0b0f2a]/40"
->
+    <div
+      class="max-w-7xl mx-auto 
+      text-white 
+      rounded-3xl 
+      p-6 lg:p-10 
+      border border-white/10 
+      shadow-2xl 
+      relative
+      transition-all duration-300 
+      backdrop-blur-xl bg-[#0b0f2a]/40"
+    >
 
       <!-- CLOSE -->
       <button
@@ -136,100 +151,98 @@
   </div>
 
   <!-- 📱 MOBILE MENU -->
-  <!-- 📱 MOBILE MENU -->
-<div
-  *ngIf="isMobileOpen"
-  class="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4"
->
-
-  <!-- CONTENEDOR GLASS -->
   <div
-    class="w-full max-w-md 
-    text-white 
-    rounded-3xl 
-    p-6 
-    border border-white/10 
-    shadow-2xl 
-    backdrop-blur-xl 
-    bg-[#0b0f2a]/40
-    transition-all duration-300"
+    *ngIf="isMobileOpen"
+    class="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4"
   >
 
-    <!-- TOP -->
-    <div class="flex justify-between items-center mb-8">
-      <img src="assets/imgs/logoFractal.png" class="w-24" />
+    <div
+      class="w-full max-w-md 
+      text-white 
+      rounded-3xl 
+      p-6 
+      border border-white/10 
+      shadow-2xl 
+      backdrop-blur-xl 
+      bg-[#0b0f2a]/40
+      transition-all duration-300"
+    >
 
-      <button (click)="toggleMobile()">
-        <i class="bi bi-x-lg text-xl"></i>
-      </button>
-    </div>
+      <!-- TOP -->
+      <div class="flex justify-between items-center mb-8">
+        <img src="assets/imgs/logoFractal.png" class="w-24" />
 
-    <!-- LINKS -->
-    <div class="flex flex-col gap-6 text-base">
-
-      <!-- SERVICIOS -->
-      <div>
-
-        <button
-          (click)="toggleMobileServices()"
-          class="flex justify-between items-center w-full py-2"
-        >
-          <span class="font-medium">Servicios</span>
-
-          <i
-            class="bi transition"
-            [ngClass]="isMobileServicesOpen ? 'bi-chevron-up' : 'bi-chevron-down'"
-          ></i>
+        <button (click)="toggleMobile()">
+          <i class="bi bi-x-lg text-xl"></i>
         </button>
+      </div>
 
-        <div
-          *ngIf="isMobileServicesOpen"
-          class="mt-4 flex flex-col gap-4 pl-4 text-sm text-white/70 border-l border-white/20"
-        >
+      <!-- LINKS -->
+      <div class="flex flex-col gap-6 text-base">
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-laptop"></i> Diseño web
-          </div>
+        <!-- SERVICIOS -->
+        <div>
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-bar-chart"></i> Marketing
-          </div>
+          <button
+            (click)="toggleMobileServices()"
+            class="flex justify-between items-center w-full py-2"
+          >
+            <span class="font-medium">Servicios</span>
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-grid"></i> Producción
-          </div>
+            <i
+              class="bi transition"
+              [ngClass]="isMobileServicesOpen ? 'bi-chevron-up' : 'bi-chevron-down'"
+            ></i>
+          </button>
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-person"></i> Consultoría
+          <div
+            *ngIf="isMobileServicesOpen"
+            class="mt-4 flex flex-col gap-4 pl-4 text-sm text-white/70 border-l border-white/20"
+          >
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-laptop"></i> Diseño web
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-bar-chart"></i> Marketing
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-grid"></i> Producción
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-person"></i> Consultoría
+            </div>
+
           </div>
 
         </div>
 
+        <!-- LINKS -->
+        <a class="hover:text-white/70 transition">Nosotros</a>
+        <a class="hover:text-white/70 transition">Proceso</a>
+        <a class="hover:text-white/70 transition">Portafolio</a>
+        <a class="hover:text-white/70 transition">Testimonios</a>
+
       </div>
 
-      <!-- LINKS PRINCIPALES -->
-      <a class="hover:text-white/70 transition">Nosotros</a>
-      <a class="hover:text-white/70 transition">Proceso</a>
-      <a class="hover:text-white/70 transition">Portafolio</a>
-      <a class="hover:text-white/70 transition">Testimonios</a>
+      <!-- CTA -->
+      <div class="mt-10 flex flex-col gap-4">
 
-    </div>
+        <button class="bg-white/10 py-3 rounded-xl flex justify-center gap-2">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </button>
 
-    <!-- CTA -->
-    <div class="mt-10 flex flex-col gap-4">
+        <button class="border border-white/20 py-3 rounded-xl flex justify-center gap-2">
+          <i class="bi bi-people"></i> Contacto
+        </button>
 
-      <button class="bg-white/10 py-3 rounded-xl flex justify-center gap-2">
-        <i class="bi bi-whatsapp"></i> WhatsApp
-      </button>
-
-      <button class="border border-white/20 py-3 rounded-xl flex justify-center gap-2">
-        <i class="bi bi-people"></i> Contacto
-      </button>
+      </div>
 
     </div>
 
   </div>
-
-</div>
 
 </header>
