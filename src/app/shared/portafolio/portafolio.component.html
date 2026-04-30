@@ -1,15 +1,15 @@
 <section class="relative py-0">
-  <div class="bg-[#F5F5F7] px-6 lg:px-16 py-16">
+  <div class="bg-[#F5F5F7] px-4 sm:px-6 lg:px-16 py-12 sm:py-16">
 
     <!-- HEADER -->
-    <div class="max-w-7xl mx-auto mb-12">
+    <div class="max-w-7xl mx-auto mb-10 sm:mb-12">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-4 h-4 rounded-full bg-gradient-to-r from-gray-400 to-gray-600"></div>
-        <span class="tracking-[0.4em] text-sm text-gray-600">PORTAFOLIO</span>
+        <span class="tracking-[0.4em] text-xs sm:text-sm text-gray-600">PORTAFOLIO</span>
         <div class="flex-1 h-[1px] bg-gray-300"></div>
       </div>
 
-      <p class="text-gray-600 max-w-3xl text-lg leading-relaxed">
+      <p class="text-gray-600 max-w-3xl text-base sm:text-lg leading-relaxed">
         Conoce más sobre nuestra experiencia explorando proyectos...
       </p>
     </div>
@@ -19,8 +19,7 @@
 
       <!-- FLECHA IZQUIERDA -->
       <button (click)="prev()"
-        class="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/70 backdrop-blur hover:bg-white transition shadow-sm">
-        
+        class="flex absolute left-2 sm:left-0 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 items-center justify-center rounded-full bg-white/70 backdrop-blur hover:bg-white transition shadow-sm">
         <span class="text-lg text-gray-600">‹</span>
       </button>
 
@@ -29,20 +28,20 @@
 
         <!-- TRACK -->
         <div class="flex transition-transform duration-500 ease-in-out"
-          [style.transform]="'translateX(-' + currentIndex * (100/3) + '%)'">
+          [style.transform]="'translateX(-' + currentIndex * getSlideWidth() + '%)'">
 
           <!-- CARD -->
           <div *ngFor="let item of projects"
-            class="w-1/3 flex-shrink-0 px-3">
+            class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-3">
 
-            <div class="bg-white rounded-[28px] shadow-sm p-4 hover:shadow-md transition">
+            <div class="bg-white rounded-[28px] shadow-sm p-3 sm:p-4 hover:shadow-md transition">
 
               <div class="relative rounded-[24px] overflow-hidden">
-                <img [src]="item.img" class="w-full h-[380px] object-cover">
+                <img [src]="item.img" class="w-full h-[260px] sm:h-[320px] lg:h-[380px] object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/90"></div>
               </div>
 
-              <p class="text-center text-gray-700 mt-4 text-lg">
+              <p class="text-center text-gray-700 mt-3 sm:mt-4 text-base sm:text-lg">
                 {{ item.title }}
               </p>
 
@@ -55,8 +54,7 @@
 
       <!-- FLECHA DERECHA -->
       <button (click)="next()"
-        class="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/70 backdrop-blur hover:bg-white transition shadow-sm">
-        
+        class="flex absolute right-2 sm:right-0 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 items-center justify-center rounded-full bg-white/70 backdrop-blur hover:bg-white transition shadow-sm">
         <span class="text-lg text-gray-600">›</span>
       </button>
 

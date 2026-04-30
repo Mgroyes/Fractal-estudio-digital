@@ -1,12 +1,12 @@
-<section class="relative pt-2 pb-12 text-white">
+<section class="relative pt-2 pb-20 text-white overflow-hidden">
 
-  <div class="max-w-7xl mx-auto px-6 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
 
     <!-- HEADER -->
     <div class="flex items-center gap-4 mb-6">
       <div class="w-5 h-5 rounded-full bg-gray-300"></div>
 
-      <h2 class="tracking-[0.4em] text-sm text-gray-300">
+      <h2 class="tracking-[0.4em] text-xs sm:text-sm text-gray-300">
         PROCESO
       </h2>
 
@@ -14,76 +14,85 @@
     </div>
 
     <!-- TEXTO -->
-    <p class="text-lg lg:text-xl text-gray-300 max-w-3xl mb-12">
+    <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mb-10 lg:mb-12">
       <span class="font-semibold text-white">Tu idea es solo el comienzo.</span><br>
       Nos encargamos de estructurarla, diseñarla y convertirla en algo que realmente genere impacto.
     </p>
 
     <!-- GRID -->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
 
-      <!-- CARD 1 (PASOS) -->
-      <div class="bg-gradient-to-br from-[#0f1c3f] to-[#2a1b4f] 
-                  rounded-[32px] p-6 flex flex-col justify-between h-[420px]
-                  shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+      <!-- CARD PROCESO -->
+      <div 
+        class="relative overflow-hidden 
+               rounded-[36px] sm:rounded-[40px] lg:rounded-[32px]
+               h-[500px] sm:h-[540px] lg:h-[420px]
+               shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
 
-        <div class="space-y-5 text-sm text-gray-300">
+        <img 
+          src="assets/imgs/proceso1.png"
+          class="absolute inset-0 w-full h-full object-cover lg:hidden"
+        />
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-inbox text-lg"></i>
-            <p>Recibimos tu solicitud</p>
+        <div class="hidden lg:block absolute inset-0 
+                    bg-gradient-to-br 
+                    from-[#0f1c3f] 
+                    via-[#1c2a5a] 
+                    to-[#3b1d5c]">
+        </div>
+
+        <div class="absolute inset-0 bg-black/50 lg:hidden"></div>
+
+        <div class="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8">
+
+          <div class="space-y-5 text-sm sm:text-base text-gray-200">
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-inbox text-lg"></i>
+              <p>Recibimos tu solicitud</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-chat-dots text-lg"></i>
+              <p>Contacto directo/viabilidad</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-lightbulb text-lg"></i>
+              <p>Propuesta de valor</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-gear text-lg"></i>
+              <p>Producción</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="bi bi-emoji-smile text-lg"></i>
+              <p>Cliente feliz</p>
+            </div>
+
           </div>
 
-          <div class="flex items-center gap-3">
-            <i class="bi bi-chat-dots text-lg"></i>
-            <p>Contacto directo/viabilidad</p>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <i class="bi bi-lightbulb text-lg"></i>
-            <p>Propuesta de valor</p>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <i class="bi bi-gear text-lg"></i>
-            <p>Producción</p>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <i class="bi bi-emoji-smile text-lg"></i>
-            <p>Cliente feliz</p>
-          </div>
+          <p class="mt-6 font-semibold text-white text-lg sm:text-xl leading-snug">
+            Así de fácil es trabajar<br>con nosotros
+          </p>
 
         </div>
 
-        <p class="mt-6 font-semibold text-white">
-          Así de fácil es trabajar<br>con nosotros
-        </p>
-
       </div>
 
-      <!-- CARD IMG 1 -->
-      <div class="relative h-[620px] rounded-[32px] overflow-hidden">
-        <img 
-          src="assets/imgs/proceso1.png"
-          class="w-full h-full object-cover object-center"
-        />
+      <!-- SOLO DESKTOP -->
+      <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
+        <img src="assets/imgs/proceso1.png" class="w-full h-full object-cover" />
       </div>
 
-      <!-- CARD IMG 2 -->
-      <div class="relative h-[620px] rounded-[32px] overflow-hidden">
-        <img 
-          src="assets/imgs/proceso2.png"
-          class="w-full h-full object-cover object-center"
-        />
+      <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
+        <img src="assets/imgs/proceso2.png" class="w-full h-full object-cover" />
       </div>
 
-      <!-- CARD IMG 3 -->
-      <div class="relative h-[620px] rounded-[32px] overflow-hidden">
-        <img 
-          src="assets/imgs/proceso3.png"
-          class="w-full h-full object-cover object-center"
-        />
+      <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
+        <img src="assets/imgs/proceso3.png" class="w-full h-full object-cover" />
       </div>
 
     </div>
@@ -91,42 +100,59 @@
   </div>
 
   <!-- TESTIMONIOS -->
-  <div class="max-w-7xl mx-auto px-6 -mt-70 lg:-mt-90 relative z-10">
+ <!-- TESTIMONIOS -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-4 lg:mt-0 relative z-10">
 
-    <div class="relative rounded-[40px] p-[1px] bg-gradient-to-r from-white/20 to-white/5">
+  <div class="relative rounded-[30px] lg:rounded-[40px] p-[1px] bg-gradient-to-r from-white/20 to-white/5">
 
-      <div class="rounded-[40px] bg-white/5 backdrop-blur-xl px-10 py-10 flex items-center gap-10">
+    <div class="relative rounded-[30px] lg:rounded-[40px] bg-white/5 backdrop-blur-xl 
+                px-6 sm:px-8 lg:px-10 py-8 lg:py-10 
+                flex flex-col lg:flex-row items-center lg:items-center gap-6 lg:gap-12">
 
-        <button class="text-white/50 hover:text-white transition">
-          <i class="bi bi-chevron-left text-2xl"></i>
-        </button>
+      <!-- 🔥 FLECHA IZQUIERDA -->
+      <button
+        class="flex absolute left-2 sm:left-3 
+               top-[40%] sm:top-1/2 -translate-y-1/2 z-10 
+               w-8 h-8 sm:w-10 sm:h-10 items-center justify-center 
+               rounded-full bg-white/10 backdrop-blur-md hover:bg-white/60 
+               transition shadow-sm">
+        <span class="text-lg text-gray-700">‹</span>
+      </button>
 
-        <div class="flex flex-col items-center min-w-[120px] text-center">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 mb-3"></div>
+      <!-- AVATAR -->
+      <div class="flex flex-col items-center text-center lg:min-w-[140px]">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 mb-3"></div>
 
-          <p class="text-xs text-gray-300">
-            Contacto<br>directo/viabilidad
-          </p>
-        </div>
-
-        <div class="flex-1">
-          <h4 class="text-xl lg:text-2xl font-semibold mb-3">
-            Ellos han confiado en nuestro trabajo
-          </h4>
-
-          <p class="text-gray-300 leading-relaxed max-w-2xl">
-            Sus diseños y procesos convierten lo funcional en productos agradables para los usuarios...
-          </p>
-        </div>
-
-        <button class="text-white/50 hover:text-white transition">
-          <i class="bi bi-chevron-right text-2xl"></i>
-        </button>
-
+        <p class="text-xs text-gray-300">
+          Contacto<br>directo/viabilidad
+        </p>
       </div>
+
+      <!-- TEXTO -->
+      <div class="flex-1 text-center lg:text-left lg:px-4">
+        <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 leading-snug">
+          Ellos han confiado en nuestro trabajo
+        </h4>
+
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base max-w-2xl mx-auto lg:mx-0">
+          Sus diseños y procesos convierten lo funcional en productos agradables para los usuarios...
+        </p>
+      </div>
+
+      <!-- 🔥 FLECHA DERECHA -->
+      <button
+        class="flex absolute right-2 sm:right-3 
+               top-[40%] sm:top-1/2 -translate-y-1/2 z-10 
+               w-8 h-8 sm:w-10 sm:h-10 items-center justify-center 
+               rounded-full bg-white/10 backdrop-blur-md hover:bg-white/60 
+               transition shadow-sm">
+        <span class="text-lg text-gray-700">›</span>
+      </button>
 
     </div>
 
   </div>
+
+</div>
 
 </section>
