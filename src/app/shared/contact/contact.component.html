@@ -39,38 +39,67 @@
       </div>
 
       <!-- FORMULARIO -->
-      <form class="space-y-6">
+      <!-- FORMULARIO -->
+<form 
+  action="https://formspree.io/f/xvzlajzd" 
+  method="POST"
+  class="space-y-6"
+>
 
-        <div>
-          <label class="block text-sm text-gray-700 mb-2">Nombre completo</label>
-          <input type="text"
-            class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
-        </div>
+  <!-- Nombre -->
+  <div>
+    <label class="block text-sm text-gray-700 mb-2">Nombre completo</label>
+    <input 
+      type="text"
+      name="nombre"
+      required
+      placeholder="Tu nombre"
+      class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
+  </div>
 
-        <div>
-          <label class="block text-sm text-gray-700 mb-2">Correo</label>
-          <input type="email"
-            class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
-        </div>
+  <!-- Correo -->
+  <div>
+    <label class="block text-sm text-gray-700 mb-2">Correo</label>
+    <input 
+      type="email"
+      name="email"
+      required
+      placeholder="tu@email.com"
+      class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
+  </div>
 
-        <div>
-          <label class="block text-sm text-gray-700 mb-2">Cel</label>
-          <input type="text"
-            class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
-        </div>
+  <!-- Teléfono -->
+  <div>
+    <label class="block text-sm text-gray-700 mb-2">Cel</label>
+    <input 
+      type="text"
+      name="telefono"
+      placeholder="Tu número"
+      class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400">
+  </div>
 
-        <div>
-          <label class="block text-sm text-gray-700 mb-2">Descripción de solicitud</label>
-          <textarea rows="4"
-            class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
-        </div>
+  <!-- Mensaje -->
+  <div>
+    <label class="block text-sm text-gray-700 mb-2">Descripción de solicitud</label>
+    <textarea 
+      name="mensaje"
+      rows="4"
+      required
+      placeholder="Cuéntanos tu idea..."
+      class="w-full rounded-xl border border-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+  </div>
 
-        <button
-          class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
-          Enviar solicitud
-        </button>
+  <!-- Campo oculto PRO -->
+  <input type="hidden" name="_subject" value="Nuevo lead desde landing">
 
-      </form>
+  <!-- Botón -->
+  <button
+    type="submit"
+    class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition w-full">
+    Enviar solicitud
+  </button>
+
+</form>
 
     </div>
 
