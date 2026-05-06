@@ -13,8 +13,9 @@ export class NavbarComponent {
   isMobileOpen = false;
   isMobileServicesOpen = false;
 
-  isScrolled = false; // 🔥 NUEVO
+  isScrolled = false;
 
+  // 🔥 TOGGLES
   toggleServices() {
     this.isServicesOpen = !this.isServicesOpen;
   }
@@ -27,7 +28,7 @@ export class NavbarComponent {
     this.isMobileServicesOpen = !this.isMobileServicesOpen;
   }
 
-  // 🔥 DETECTAR SCROLL
+  // 🔥 SCROLL NAVBAR (SOMBRA / ESTADO)
   @HostListener('window:scroll', [])
   onScroll() {
     this.isScrolled = window.scrollY > 50;
@@ -40,6 +41,30 @@ export class NavbarComponent {
 
     if (!target.closest('header')) {
       this.isServicesOpen = false;
+    }
+  }
+
+  // 🚀 SCROLL A SECCIONES (VERSIÓN FINAL PRO)
+  scrollTo(section: string) {
+
+    const element = document.getElementById(section);
+
+    // 🔥 CERRAR TODO PRIMERO
+    this.isMobileOpen = false;
+    this.isMobileServicesOpen = false;
+    this.isServicesOpen = false;
+
+    if (element) {
+      const yOffset = -90;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      // 🔥 pequeño delay para evitar bug visual en mobile
+      setTimeout(() => {
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth',
+        });
+      }, 120);
     }
   }
 }
