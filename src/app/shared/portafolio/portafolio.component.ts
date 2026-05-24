@@ -12,7 +12,7 @@ export class PortafolioComponent {
   currentIndex = 0;
 
   projects = [
-    { img: 'assets/imgs/imgPortafolio1.png', title: 'Email marketing' },
+    { img: 'assets/imgs/imgport11.png', title: 'Email marketing' },
     { img: 'assets/imgs/imgPortafolio2.png', title: 'Marketing y redes' },
     { img: 'assets/imgs/imgPortafolio3.png', title: 'Producto' },
     { img: 'assets/imgs/imgPortafolio3.png', title: 'Producto' },
