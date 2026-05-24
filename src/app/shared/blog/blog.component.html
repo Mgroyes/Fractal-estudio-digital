@@ -1,0 +1,134 @@
+<section class="relative py-0">
+
+  <div class="bg-[#F5F5F7] px-4 sm:px-6 lg:px-16 py-16">
+
+    <!-- CONTAINER -->
+    <div class="max-w-7xl mx-auto">
+
+      <!-- HEADER -->
+      <div class="flex items-center gap-4 mb-12">
+        <div class="w-4 h-4 rounded-full bg-gradient-to-r from-gray-400 to-gray-600"></div>
+
+        <span class="tracking-[0.4em] text-xs sm:text-sm text-gray-600 uppercase">
+          SOLUCIONES
+        </span>
+
+        <div class="flex-1 h-[1px] bg-gray-300"></div>
+      </div>
+
+      <!-- GRID -->
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+
+        <!-- LEFT -->
+        <div class="max-w-[520px]">
+
+          <!-- TITLE -->
+          <h2
+            class="text-4xl sm:text-5xl lg:text-6xl
+                   leading-[1]
+                   tracking-[-0.04em]
+                   font-semibold
+                   text-[#111827]
+                   mb-8">
+
+            Diseñado para equipos modernos como el tuyo
+
+          </h2>
+
+          <!-- TEXT -->
+          <p
+            class="text-gray-600
+                   text-base sm:text-lg
+                   leading-relaxed
+                   max-w-xl
+                   mb-8">
+
+            Creamos experiencias digitales enfocadas en innovación,
+            automatización y crecimiento para empresas que quieren
+            destacar en el mercado actual.
+
+          </p>
+
+          <!-- LINK -->
+          <button
+            class="group flex items-center gap-3 text-black font-medium">
+
+            Saber más
+
+            <span
+              class="transition-transform duration-300 group-hover:translate-x-1">
+
+              →
+
+            </span>
+
+          </button>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="grid sm:grid-cols-2 gap-x-10 lg:gap-x-14 gap-y-12">
+
+          <!-- ITEM -->
+          <div *ngFor="let item of features">
+
+            <!-- ICON -->
+            <div
+              class="w-14 h-14 rounded-full bg-[#EEF2FF]
+                     flex items-center justify-center mb-5">
+
+              <i
+                [class]="item.icon"
+                class="text-xl text-[#4B5563]">
+              </i>
+
+            </div>
+
+            <!-- TITLE -->
+            <h3
+              class="text-2xl lg:text-3xl
+                     font-semibold
+                     tracking-[-0.03em]
+                     text-[#111827]
+                     mb-4">
+
+              {{ item.title }}
+
+            </h3>
+
+            <!-- DESCRIPTION -->
+            <p
+              class="text-gray-600
+                     text-base
+                     leading-relaxed">
+
+              {{ item.description }}
+
+            </p>
+
+            <!-- LINK -->
+            <button
+              class="group flex items-center gap-2 mt-5 text-black text-sm font-medium">
+
+              Saber más
+
+              <span
+                class="transition-transform duration-300 group-hover:translate-x-1">
+
+                →
+
+              </span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

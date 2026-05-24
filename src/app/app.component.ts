@@ -7,11 +7,12 @@ import { ProcesoComponent } from "./shared/proceso/proceso.component";
 import { ContactComponent } from "./shared/contact/contact.component";
 import { PortafolioComponent } from './shared/portafolio/portafolio.component';
 import { FooterComponent } from "./shared/footer/footer.component";
+import { BlogComponent } from "./shared/blog/blog.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HeroComponent, NosotrosComponent, ServiciosComponent, ProcesoComponent, ContactComponent, PortafolioComponent, FooterComponent], // 👈 IMPORTANTE
+  imports: [NavbarComponent, HeroComponent, NosotrosComponent, ServiciosComponent, ProcesoComponent, ContactComponent, PortafolioComponent, FooterComponent, BlogComponent], // 👈 IMPORTANTE
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
