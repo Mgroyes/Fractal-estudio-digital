@@ -12,11 +12,11 @@ export class PortafolioComponent {
   currentIndex = 0;
 
   projects = [
-    { img: '/assets/imgs/comp1.png', title: 'Email marketing' },
-    { img: 'assets/imgs/comp3.png', title: 'Marketing y redes' },
-    { img: 'assets/imgs/comp4.png', title: 'Producto' },
-    { img: 'assets/imgs/comp2.png', title: 'Producto' },
-    { img: 'assets/imgs/comp5.png', title: 'Producto' },
+    { img: '/assets/imgs/macad-feed.png', title: 'Email marketing' },
+    { img: 'assets/imgs/wiframe-web.png', title: 'Marketing y redes' },
+    { img: 'assets/imgs/triidy-feed.png', title: 'Producto' },
+    { img: 'assets/imgs/maku-zambo.png', title: 'Producto' },
+    { img: 'assets/imgs/drink-point.png', title: 'Producto' },
   ];
 
   visibleCards = 3;
