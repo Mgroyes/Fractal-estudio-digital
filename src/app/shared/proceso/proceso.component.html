@@ -1,4 +1,4 @@
-<section class="relative pt-2 pb-20 text-white overflow-hidden">
+<section  id="proceso" aria-labelledby="proceso-title" class="relative pt-2 pb-20 text-white overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
 
@@ -6,7 +6,7 @@
     <div class="flex items-center gap-4 mb-6">
       <div class="w-5 h-5 rounded-full bg-gray-300"></div>
 
-      <h2 class="tracking-[0.4em] text-xs sm:text-sm text-gray-300">
+      <h2 id="proceso-title" class="tracking-[0.4em] text-xs sm:text-sm text-gray-300">
         PROCESO
       </h2>
 
@@ -14,7 +14,7 @@
     </div>
 
     <!-- TEXTO -->
-    <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mb-10 lg:mb-12">
+    <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mb-10 lg:mb-12 leading-relaxed">
       <span class="font-semibold text-white">Tu idea es solo el comienzo.</span><br>
       Nos encargamos de estructurarla, <strong>diseñarla y convertirla en algo que realmente genere impacto.</strong> 
     </p>
@@ -30,7 +30,7 @@
                shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
 
         <img 
-          src="assets/imgs/primer-paso.png"
+         src="assets/imgs/primer-paso.webp"
           class="absolute inset-0 w-full h-full object-cover lg:hidden"
         />
 
@@ -84,15 +84,30 @@
 
       <!-- SOLO DESKTOP -->
       <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
-        <img src="assets/imgs/primer-paso.png" class="w-full h-full object-cover" />
+        <img  ngSrc="assets/imgs/primer-paso.webp"
+          width="700"
+          height="1200"
+          loading="lazy"
+          alt="Planeación estratégica digital" 
+          class="w-full h-full object-cover"/>
       </div>
 
       <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
-        <img src="assets/imgs/segundo-paso.png" class="w-full h-full object-cover" />
+        <img   ngSrc="assets/imgs/segundo-paso.webp"
+          width="700"
+          height="1200"
+          loading="lazy"
+          alt="Proceso de diseño y desarrollo"
+          class="w-full h-full object-cover" />
       </div>
 
       <div class="hidden lg:block relative h-[620px] rounded-[32px] overflow-hidden">
-        <img src="assets/imgs/tercer-paso.png" class="w-full h-full object-cover" />
+        <img   ngSrc="assets/imgs/tercer-paso.webp"
+          width="700"
+          height="1200"
+          loading="lazy"
+          alt="Resultados digitales y experiencia de usuario"
+          class="w-full h-full object-cover" />
       </div>
 
     </div>
@@ -101,11 +116,11 @@
 
   
  <!-- TESTIMONIOS -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-4 lg:mt-0 relative z-10">
+<section aria-label="Testimonios" class="max-w-7xl mx-auto px-4 sm:px-6 mt-4 lg:mt-0 relative z-10">
 
   <div class="relative rounded-[30px] lg:rounded-[40px] p-[1px] bg-gradient-to-r from-white/20 to-white/5">
 
-    <div class="relative rounded-[30px] lg:rounded-[40px] bg-white/5 backdrop-blur-xl 
+    <div class="relative rounded-[30px] lg:rounded-[40px] bg-white/5 backdrop-blur-md 
                 px-5 sm:px-6 lg:px-10 
                 pt-6 pb-8 sm:py-8 lg:py-10
                 flex flex-col lg:flex-row items-center justify-start lg:justify-center 
@@ -113,6 +128,8 @@
 
       <!--  FLECHA IZQUIERDA -->
       <button
+       type="button"
+        aria-label="Anterior"
         class="flex absolute left-20 -translate-x-1/2 
                top-[30%] sm:top-1/2 -translate-y-1/2 z-10 
                w-7 h-7 sm:w-9 sm:h-9 items-center justify-center 
@@ -143,6 +160,8 @@
 
       <!--  FLECHA DERECHA -->
       <button
+       type="button"
+        aria-label="Siguiente"
         class="flex absolute right-20 translate-x-1/2 
                top-[30%] sm:top-1/2 -translate-y-1/2 z-10 
                w-7 h-7 sm:w-9 sm:h-9 items-center justify-center 
@@ -155,6 +174,6 @@
 
   </div>
 
-</div>
+</section>
 
 </section>

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-servicios',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    NgOptimizedImage
+  ],
   templateUrl: './servicios.component.html',
 })
 export class ServiciosComponent {
@@ -12,7 +15,11 @@ export class ServiciosComponent {
   activeIndex: number | null = null;
 
   toggle(index: number) {
-    this.activeIndex = this.activeIndex === index ? null : index;
+
+    this.activeIndex =
+      this.activeIndex === index
+        ? null
+        : index;
   }
 
 }

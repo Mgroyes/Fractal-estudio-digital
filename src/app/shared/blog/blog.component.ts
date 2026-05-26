@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class BlogComponent {
 
-  features = [
+  readonly features = [
     {
       icon: 'bi bi-rocket-takeoff',
       title: 'Marketing',

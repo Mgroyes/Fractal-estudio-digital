@@ -10,10 +10,10 @@
   }"
 >
 
-  <!-- 🔥 CAPA BASE (BLUR SIEMPRE ACTIVO) -->
+  <!--  CAPA BASE (BLUR SIEMPRE ACTIVO) -->
   <div class="absolute inset-0 backdrop-blur-sm bg-[#0b0f2a]/30"></div>
 
-  <!-- 🔥 CAPA DINÁMICA (SE SUMA, NO REEMPLAZA) -->
+  <!--  CAPA DINÁMICA (SE SUMA, NO REEMPLAZA) -->
   <div
     class="absolute inset-0 transition-all duration-300"
     [ngClass]="{
@@ -28,12 +28,19 @@
     }"
   ></div>
 
-  <!-- 🧱 NAV -->
+  <!--  NAV -->
   <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center text-white">
 
     <!-- LOGO -->
     <div class="flex items-center">
-      <img src="assets/imgs/logoFractal.png" class="w-28 sm:w-32 object-contain" />
+      <img
+      ngSrc="assets/imgs/logo.webp"
+      width="140"
+      height="48"
+      priority
+      alt="Logo Estudio Digital"
+      class="w-28 sm:w-32 object-contain"
+      />
     </div>
 
     <!-- DESKTOP MENU -->
@@ -51,22 +58,54 @@
         ></i>
       </button>
 
-    <a (click)="scrollTo('nosotros')" class="hover:text-white/70 transition cursor-pointer">Nosotros</a>  
-    <a (click)="scrollTo('proceso')" class="hover:text-white/70 transition cursor-pointer">Proceso</a>
-    <a (click)="scrollTo('portafolio')" class="hover:text-white/70 transition cursor-pointer">Portafolio</a>
-    <a (click)="scrollTo('contacto')" class="hover:text-white/70 transition cursor-pointer">Contacto</a>
+    <a
+      href="#nosotros"
+      (click)="scrollTo('nosotros')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Nosotros
+    </a>
+    <a
+      href="#proceso"
+      (click)="scrollTo('proceso')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Proceso
+    </a>
+    <a
+      href="#servicios"
+      (click)="scrollTo('servicios')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Servicios
+    </a>
+    <a
+      href="#portafolio"
+      (click)="scrollTo('portafolio')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Portafolio
+    </a>
+    <a
+      href="#contacto"
+      (click)="scrollTo('contacto')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Contacto
+    </a>
+    
      
 
     </div>
 
     <!-- MOBILE BTN -->
-    <button class="lg:hidden" (click)="toggleMobile()">
+    <button  class="lg:hidden" (click)="toggleMobile()">
       <i class="bi bi-list text-2xl"></i>
     </button>
 
   </nav>
 
-  <!-- 🔥 MEGA MENU -->
+  <!--  MEGA MENU -->
   <div
     class="fixed top-[72px] left-0 w-full px-4 sm:px-6 lg:px-8 transition-all duration-300 origin-top"
     [ngClass]="isServicesOpen
@@ -134,15 +173,15 @@
       <!-- CTA -->
       <div class="mt-8 border-t border-white/10 pt-6 flex justify-center flex-wrap gap-6 text-sm">
 
-        <button class="flex items-center gap-2 hover:text-white/70 transition">
+        <button type="button"(click)="toggleMobile()" class="flex items-center gap-2 hover:text-white/70 transition">
           <i class="bi bi-people"></i> Contacto
         </button>
 
-        <button class="flex items-center gap-2 hover:text-white/70 transition">
+        <button type="button"(click)="toggleMobile()" class="flex items-center gap-2 hover:text-white/70 transition">
           <i class="bi bi-whatsapp"></i> WhatsApp
         </button>
 
-        <button class="flex items-center gap-2 hover:text-white/70 transition">
+        <button type="button"(click)="toggleMobile()" class="flex items-center gap-2 hover:text-white/70 transition">
           <i class="bi bi-image"></i> Portafolio
         </button>
 
@@ -171,7 +210,13 @@
 
       <!-- TOP -->
       <div class="flex justify-between items-center mb-8">
-        <img src="assets/imgs/logoFractal.png" class="w-24" />
+        <img
+        ngSrc="assets/imgs/logo.webp"
+        width="120"
+        height="42"
+        alt="Logo Estudio Digital"
+        class="w-24 object-contain"
+      />
 
         <button (click)="toggleMobile()">
           <i class="bi bi-x-lg text-xl"></i>
@@ -222,21 +267,53 @@
         </div>
 
         <!-- LINKS -->
-        <a (click)="scrollTo('nosotros')" class="hover:text-white/70 transition">Nosotros</a>
-        <a (click)="scrollTo('proceso')" class="hover:text-white/70 transition">Proceso</a>
-        <a (click)="scrollTo('portafolio')" class="hover:text-white/70 transition">Portafolio</a>
-        <a (click)="scrollTo('contacto')" class="hover:text-white/70 transition">Contacto</a>
+        <a
+      href="#nosotros"
+      (click)="scrollTo('nosotros')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Nosotros
+    </a>
+    <a
+      href="#proceso"
+      (click)="scrollTo('proceso')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Proceso
+    </a>
+    <a
+      href="#servicios"
+      (click)="scrollTo('servicios')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Servicios
+    </a>
+    <a
+      href="#portafolio"
+      (click)="scrollTo('portafolio')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Portafolio
+    </a>
+    <a
+      href="#contacto"
+      (click)="scrollTo('contacto')"
+      class="hover:text-white/70 transition cursor-pointer"
+    >
+      Contacto
+    </a>
+    
 
       </div>
 
       <!-- CTA -->
       <div class="mt-10 flex flex-col gap-4">
 
-        <button class="bg-white/10 py-3 rounded-xl flex justify-center gap-2">
+        <button type="button"(click)="toggleMobile()" class="bg-white/10 py-3 rounded-xl flex justify-center gap-2">
           <i class="bi bi-whatsapp"></i> WhatsApp
         </button>
 
-        <button class="border border-white/20 py-3 rounded-xl flex justify-center gap-2">
+        <button type="button"(click)="toggleMobile()" class="border border-white/20 py-3 rounded-xl flex justify-center gap-2">
           <i class="bi bi-people"></i> Contacto
         </button>
 

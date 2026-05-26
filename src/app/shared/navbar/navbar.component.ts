@@ -1,10 +1,13 @@
 import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    NgOptimizedImage
+  ],
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
@@ -15,7 +18,7 @@ export class NavbarComponent {
 
   isScrolled = false;
 
-  // 🔥 TOGGLES
+  //  TOGGLES
   toggleServices() {
     this.isServicesOpen = !this.isServicesOpen;
   }
@@ -28,15 +31,16 @@ export class NavbarComponent {
     this.isMobileServicesOpen = !this.isMobileServicesOpen;
   }
 
-  // 🔥 SCROLL NAVBAR (SOMBRA / ESTADO)
+  //  SCROLL NAVBAR
   @HostListener('window:scroll', [])
   onScroll() {
     this.isScrolled = window.scrollY > 50;
   }
 
-  // 🔥 CERRAR MENÚ AL HACER CLICK AFUERA
+  //  CERRAR MENÚ AL HACER CLICK AFUERA
   @HostListener('document:click', ['$event'])
   closeOutside(event: Event) {
+
     const target = event.target as HTMLElement;
 
     if (!target.closest('header')) {
@@ -44,26 +48,32 @@ export class NavbarComponent {
     }
   }
 
-  // 🚀 SCROLL A SECCIONES (VERSIÓN FINAL PRO)
+  //  SCROLL A SECCIONES
   scrollTo(section: string) {
 
     const element = document.getElementById(section);
 
-    // 🔥 CERRAR TODO PRIMERO
+    // 🔥 cerrar overlays
     this.isMobileOpen = false;
     this.isMobileServicesOpen = false;
     this.isServicesOpen = false;
 
     if (element) {
-      const yOffset = -90;
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
-      // 🔥 pequeño delay para evitar bug visual en mobile
+      const yOffset = -90;
+
+      const y =
+        element.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+
       setTimeout(() => {
+
         window.scrollTo({
           top: y,
           behavior: 'smooth',
         });
+
       }, 120);
     }
   }
