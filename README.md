@@ -1,27 +1,138 @@
-# EstudioDigital
+# Fractal Estudio Digital
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Sitio web corporativo desarrollado con Angular 17 para Fractal Estudio Digital, enfocado en diseño UX/UI, desarrollo web y posicionamiento digital.
 
-## Development server
+Proyecto optimizado para SEO, responsive design y captación de leads, preparado para futuras integraciones con backend y gestión propia de clientes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+# Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Producción:  
+https://fractal-estudio-digital.vercel.app/
 
-## Build
+Repositorio:  
+https://github.com/Mgroyes/Fractal-estudio-digital
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+# Tecnologías utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular 17
+- TypeScript
+- TailwindCSS
+- RxJS
+- Formspree
+- Vercel
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Características
 
-## Further help
+- Arquitectura modular con Angular Standalone Components
+- Diseño responsive
+- Optimización SEO y metaetiquetas
+- Open Graph para redes sociales
+- Formularios funcionales con Formspree
+- Deploy automático con Vercel
+- Código organizado y escalable
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+# Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/Mgroyes/Fractal-estudio-digital.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd Fractal-estudio-digital
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Iniciar servidor de desarrollo:
+
+```bash
+ng serve
+```
+
+Abrir en:
+
+```bash
+http://localhost:4200/
+```
+
+---
+
+# Scripts disponibles
+
+Servidor de desarrollo:
+
+```bash
+ng serve
+```
+
+Build producción:
+
+```bash
+ng build
+```
+
+Modo watch:
+
+```bash
+ng build --watch
+```
+
+Tests:
+
+```bash
+ng test
+```
+
+---
+
+# SEO implementado
+
+- Meta titles y descriptions
+- Open Graph
+- Estructura semántica HTML5
+- Optimización de imágenes
+- Responsive design
+- Jerarquía correcta de headings
+
+---
+
+# Roadmap
+
+- API propia
+- Gestión de leads
+- Dashboard administrativo
+- Automatización de correos
+- Integración con ADS
+- Blog optimizado para SEO
+
+---
+
+# Autor
+
+Mg Royes  
+Frontend Developer & UX/UI Designer
+
+GitHub:  
+https://github.com/Mgroyes
+
+---
+
+# Licencia
+
+Proyecto privado desarrollado para Fractal Estudio Digital.
