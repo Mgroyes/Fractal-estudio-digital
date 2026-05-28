@@ -114,9 +114,7 @@ ng test
 
 # Roadmap
 
-- API propia
 - Gestión de leads
-- Dashboard administrativo
 - Automatización de correos
 - Integración con ADS
 - Blog optimizado para SEO
